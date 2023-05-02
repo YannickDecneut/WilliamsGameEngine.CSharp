@@ -10,6 +10,10 @@ namespace MyGame
         private int _lives = 3;
         public GameScene()
         {
+
+            ScrollingBackground scrollingBackground = new ScrollingBackground();
+            AddGameObject(scrollingBackground); 
+            
             Ship ship = new Ship();
             AddGameObject(ship);
             ChocolateChipCookieSpawner meteorSpawner = new ChocolateChipCookieSpawner();
@@ -17,6 +21,9 @@ namespace MyGame
 
             Score score = new Score(new Vector2f(10.0f, 10.0f));
             AddGameObject(score);
+
+            
+
 
         }
         // Get the current score
